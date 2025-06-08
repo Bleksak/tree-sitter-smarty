@@ -488,11 +488,14 @@
       "value": "[^\\s=]+[\\s]*=[\\s]*(('[^']*'|\"[^\"]*\"|\\[[^\\]]*]|[^\\s}]+))"
     },
     "text": {
-      "type": "PREC",
-      "value": -1,
+      "type": "TOKEN",
       "content": {
-        "type": "PATTERN",
-        "value": "[^\\s\\|{*}-]([^\\|{*}]*[^\\|{*}-])?"
+        "type": "PREC",
+        "value": -1,
+        "content": {
+          "type": "PATTERN",
+          "value": "[^{}]+"
+        }
       }
     }
   },

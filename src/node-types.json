@@ -247,11 +247,6 @@
     }
   },
   {
-    "type": "php",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "template",
     "named": true,
     "fields": {},
@@ -291,11 +286,6 @@
     }
   },
   {
-    "type": "text",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "*}",
     "named": false
   },
@@ -313,6 +303,14 @@
   },
   {
     "type": "parameter",
+    "named": true
+  },
+  {
+    "type": "php",
+    "named": true
+  },
+  {
+    "type": "text",
     "named": true
   },
   {
