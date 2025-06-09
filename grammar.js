@@ -51,7 +51,7 @@ module.exports = grammar({
       '{block',
       repeat($.parameter),
       '}',
-      alias(repeat($._nested), $.body),
+      field('body', alias(repeat($._nested), $.body)),
       '{/block}',
     ),
 
