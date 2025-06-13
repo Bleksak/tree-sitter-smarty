@@ -154,7 +154,7 @@ module.exports = grammar({
       field('class', alias($.php_identifier, $.class)),
     ),
 
-    php_identifier: $ => /[A-z_][A-z0-9_]*/,
-    class_name: $ => /[A-z][A-z0-9_]*/,
+    php_identifier: $ => /[A-Za-z][A-Za-z0-9_]*/,
+    class_name: $ => /[A-Za-z][A-Za-z0-9_]*/,
   },
 });

@@ -69,6 +69,11 @@
     }
   },
   {
+    "type": "class",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "comment",
     "named": true,
     "fields": {}
@@ -339,6 +344,11 @@
     "fields": {}
   },
   {
+    "type": "php_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "sep",
     "named": true,
     "fields": {
@@ -441,19 +451,11 @@
     "named": false
   },
   {
-    "type": "class",
-    "named": true
-  },
-  {
     "type": "key",
     "named": true
   },
   {
     "type": "php",
-    "named": true
-  },
-  {
-    "type": "php_identifier",
     "named": true
   },
   {
