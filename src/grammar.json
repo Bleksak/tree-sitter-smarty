@@ -50,6 +50,10 @@
         {
           "type": "SYMBOL",
           "name": "sep"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "varType"
         }
       ]
     },
@@ -87,6 +91,10 @@
         {
           "type": "SYMBOL",
           "name": "sep"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "varType"
         }
       ]
     },
@@ -100,6 +108,32 @@
         {
           "type": "SYMBOL",
           "name": "fqcn"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
+    "varType": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{varType"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fqcn"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\$[^}]+"
+          },
+          "named": true,
+          "value": "var"
         },
         {
           "type": "STRING",

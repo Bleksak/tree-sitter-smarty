@@ -20,7 +20,7 @@ module.exports = grammar({
       $.first,
       $.last,
       $.sep,
-      // $.literal,
+      $.varType,
     ),
 
     _nested: $ => choice(
@@ -32,6 +32,7 @@ module.exports = grammar({
       $.first,
       $.last,
       $.sep,
+      $.varType,
     ),
 
     templateType: $ => seq(
@@ -39,6 +40,17 @@ module.exports = grammar({
       $.fqcn,
       "}",
     ),
+
+    varType: $ => seq(
+      "{varType",
+      $.fqcn,
+      alias(/\$[^}]+/, $.var),
+      "}"
+    ),
+
+    // var: $ => seq(
+
+    // ),
 
     comment: $ => seq('{*', /[^*]*/, '*}'),
 

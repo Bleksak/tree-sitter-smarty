@@ -64,6 +64,10 @@
         {
           "type": "text",
           "named": true
+        },
+        {
+          "type": "varType",
+          "named": true
         }
       ]
     }
@@ -411,6 +415,10 @@
         {
           "type": "text",
           "named": true
+        },
+        {
+          "type": "varType",
+          "named": true
         }
       ]
     }
@@ -425,6 +433,25 @@
       "types": [
         {
           "type": "fqcn",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "varType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fqcn",
+          "named": true
+        },
+        {
+          "type": "var",
           "named": true
         }
       ]
@@ -464,6 +491,10 @@
   },
   {
     "type": "value",
+    "named": true
+  },
+  {
+    "type": "var",
     "named": true
   },
   {
@@ -536,6 +567,10 @@
   },
   {
     "type": "{templateType",
+    "named": false
+  },
+  {
+    "type": "{varType",
     "named": false
   },
   {
