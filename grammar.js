@@ -58,10 +58,12 @@ module.exports = grammar({
       field('iterable', alias($.parameter, $.php)),
       // /\$[^\s]+/,
       'as',
+      field('key', alias($.parameter, $.php)),
       // field('key', $.php),
       /\$[^\s=}]+/,
       optional(seq(
         '=>',
+        field('value', alias($.parameter, $.php)),
         // field('value', $.php),
         /\$[^}]+/,
       )),

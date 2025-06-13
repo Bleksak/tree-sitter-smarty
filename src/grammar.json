@@ -202,6 +202,19 @@
           "value": "as"
         },
         {
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "parameter"
+            },
+            "named": true,
+            "value": "php"
+          }
+        },
+        {
           "type": "PATTERN",
           "value": "\\$[^\\s=}]+"
         },
@@ -214,6 +227,19 @@
                 {
                   "type": "STRING",
                   "value": "=>"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "value",
+                  "content": {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "parameter"
+                    },
+                    "named": true,
+                    "value": "php"
+                  }
                 },
                 {
                   "type": "PATTERN",

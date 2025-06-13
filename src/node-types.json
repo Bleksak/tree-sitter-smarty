@@ -136,6 +136,26 @@
             "named": true
           }
         ]
+      },
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "php",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "php",
+            "named": true
+          }
+        ]
       }
     }
   },
