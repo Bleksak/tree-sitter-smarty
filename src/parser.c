@@ -96,8 +96,8 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_RBRACE] = "}",
   [anon_sym_LBRACEvarType] = "{varType",
   [aux_sym_varType_token1] = "value",
-  [anon_sym_LBRACEvar] = "{var",
-  [anon_sym_LBRACEdefault] = "{default",
+  [anon_sym_LBRACEvar] = "type",
+  [anon_sym_LBRACEdefault] = "type",
   [aux_sym_var_token1] = "name",
   [anon_sym_EQ] = "=",
   [aux_sym_var_token2] = "text",
@@ -172,7 +172,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_LBRACEvarType] = anon_sym_LBRACEvarType,
   [aux_sym_varType_token1] = aux_sym_varType_token1,
   [anon_sym_LBRACEvar] = anon_sym_LBRACEvar,
-  [anon_sym_LBRACEdefault] = anon_sym_LBRACEdefault,
+  [anon_sym_LBRACEdefault] = anon_sym_LBRACEvar,
   [aux_sym_var_token1] = aux_sym_var_token1,
   [anon_sym_EQ] = anon_sym_EQ,
   [aux_sym_var_token2] = sym_text,
@@ -263,11 +263,11 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
   [anon_sym_LBRACEvar] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_LBRACEdefault] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [aux_sym_var_token1] = {
     .visible = true,

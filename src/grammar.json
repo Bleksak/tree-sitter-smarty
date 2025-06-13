@@ -153,17 +153,22 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "{var"
-            },
-            {
-              "type": "STRING",
-              "value": "{default"
-            }
-          ]
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "{var"
+              },
+              {
+                "type": "STRING",
+                "value": "{default"
+              }
+            ]
+          },
+          "named": true,
+          "value": "type"
         },
         {
           "type": "ALIAS",

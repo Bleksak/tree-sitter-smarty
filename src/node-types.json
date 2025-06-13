@@ -459,6 +459,10 @@
           "named": true
         },
         {
+          "type": "type",
+          "named": true
+        },
+        {
           "type": "value",
           "named": true
         }
@@ -525,6 +529,10 @@
     "named": true
   },
   {
+    "type": "type",
+    "named": true
+  },
+  {
     "type": "value",
     "named": true
   },
@@ -565,10 +573,6 @@
     "named": false
   },
   {
-    "type": "{default",
-    "named": false
-  },
-  {
     "type": "{elseif",
     "named": false
   },
@@ -602,10 +606,6 @@
   },
   {
     "type": "{templateType",
-    "named": false
-  },
-  {
-    "type": "{var",
     "named": false
   },
   {

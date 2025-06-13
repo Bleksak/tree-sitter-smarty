@@ -51,9 +51,12 @@ module.exports = grammar({
     ),
 
     var: $ => seq(
-      choice(
-        '{var',
-        '{default'
+      alias(
+        choice(
+          '{var',
+          '{default'
+        ),
+        $.type,
       ),
       alias(/\$[^=]+/, $.name),
       '=',
