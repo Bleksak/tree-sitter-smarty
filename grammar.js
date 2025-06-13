@@ -69,7 +69,7 @@ module.exports = grammar({
       )),
       '}',
       field('body', alias(repeat($._nested), $.body)),
-      field('alternative', optional($.foreach_else)),
+      field('alternative', optional($.else)),
       '{/foreach}',
     ),
 
