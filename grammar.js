@@ -36,21 +36,25 @@ module.exports = grammar({
     ),
 
     templateType: $ => seq(
-      "{templateType",
+      '{templateType',
       $.fqcn,
-      "}",
+      '}',
     ),
 
     varType: $ => seq(
-      "{varType",
+      '{varType',
       $.fqcn,
       alias(/\$[^}]+/, $.var),
-      "}"
+      '}'
     ),
 
-    // var: $ => seq(
-
-    // ),
+    var: $ => seq(
+      '{var',
+      alias(/\$[^=]+/, $.var),
+      '=',
+      alias(/[^}]+/, $.value),
+      '}'
+    ),
 
     comment: $ => seq('{*', /[^*]*/, '*}'),
 

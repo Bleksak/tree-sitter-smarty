@@ -466,6 +466,10 @@
     "named": false
   },
   {
+    "type": "=",
+    "named": false
+  },
+  {
     "type": "=>",
     "named": false
   },
@@ -567,6 +571,10 @@
   },
   {
     "type": "{templateType",
+    "named": false
+  },
+  {
+    "type": "{var",
     "named": false
   },
   {
