@@ -148,7 +148,7 @@ module.exports = grammar({
       optional('\\'),
       $._namespace_part,
       repeat(seq('\\', $._namespace_part)),
-      optional('\\'),
+      '\\',
     ),
 
     _namespace_part: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
