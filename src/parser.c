@@ -43,7 +43,7 @@ enum {
   aux_sym_parameter_token2 = 24,
   sym_text = 25,
   sym_template = 26,
-  sym__smarty = 27,
+  sym__latte = 27,
   sym__nested = 28,
   sym_comment = 29,
   sym_inline = 30,
@@ -93,7 +93,7 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_parameter_token2] = "parameter_token2",
   [sym_text] = "text",
   [sym_template] = "template",
-  [sym__smarty] = "_smarty",
+  [sym__latte] = "_latte",
   [sym__nested] = "_nested",
   [sym_comment] = "comment",
   [sym_inline] = "inline",
@@ -143,7 +143,7 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_parameter_token2] = aux_sym_parameter_token2,
   [sym_text] = sym_text,
   [sym_template] = sym_template,
-  [sym__smarty] = sym__smarty,
+  [sym__latte] = sym__latte,
   [sym__nested] = sym__nested,
   [sym_comment] = sym_comment,
   [sym_inline] = sym_inline,
@@ -274,7 +274,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym__smarty] = {
+  [sym__latte] = {
     .visible = false,
     .named = true,
   },
@@ -1936,7 +1936,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
   },
   [1] = {
     [sym_template] = STATE(253),
-    [sym__smarty] = STATE(94),
+    [sym__latte] = STATE(94),
     [sym_comment] = STATE(1),
     [sym_inline] = STATE(88),
     [sym_include] = STATE(88),
@@ -2642,7 +2642,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(104), 1,
       sym_text,
     STATE(94), 1,
-      sym__smarty,
+      sym__latte,
     STATE(22), 2,
       sym_comment,
       aux_sym_template_repeat1,
@@ -2974,7 +2974,7 @@ static const uint16_t ts_small_parse_table[] = {
     STATE(33), 1,
       sym_comment,
     STATE(94), 1,
-      sym__smarty,
+      sym__latte,
     STATE(88), 5,
       sym_inline,
       sym_include,
@@ -7284,8 +7284,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [318] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_block, 3),
   [320] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_block, 3),
   [322] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_if, 5, .production_id = 9),
-  [324] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__smarty, 1),
-  [326] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__smarty, 1),
+  [324] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__latte, 1),
+  [326] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__latte, 1),
   [328] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_foreach, 6, .production_id = 12),
   [330] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_if, 6, .production_id = 13),
   [332] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_if, 6, .production_id = 14),
@@ -7490,7 +7490,7 @@ extern "C" {
 #define extern __declspec(dllexport)
 #endif
 
-extern const TSLanguage *tree_sitter_smarty(void) {
+extern const TSLanguage *tree_sitter_latte(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

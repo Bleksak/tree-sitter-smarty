@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: 'smarty',
+  name: 'latte',
 
   extras: $ => [
     $.comment,
@@ -7,9 +7,9 @@ module.exports = grammar({
   ],
 
   rules: {
-    template: $ => repeat($._smarty),
+    template: $ => repeat($._latte),
 
-    _smarty: $ => choice(
+    _latte: $ => choice(
       $.inline,
       $.include,
       $.block,

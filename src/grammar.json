@@ -1,14 +1,14 @@
 {
-  "name": "smarty",
+  "name": "latte",
   "rules": {
     "template": {
       "type": "REPEAT",
       "content": {
         "type": "SYMBOL",
-        "name": "_smarty"
+        "name": "_latte"
       }
     },
-    "_smarty": {
+    "_latte": {
       "type": "CHOICE",
       "members": [
         {
