@@ -215,10 +215,6 @@
           }
         },
         {
-          "type": "PATTERN",
-          "value": "\\$[^\\s=}]+"
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
@@ -240,10 +236,6 @@
                     "named": true,
                     "value": "php"
                   }
-                },
-                {
-                  "type": "PATTERN",
-                  "value": "\\$[^}]+"
                 }
               ]
             },
