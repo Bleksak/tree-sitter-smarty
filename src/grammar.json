@@ -616,46 +616,30 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "fqn"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "class_name"
-        }
-      ]
-    },
-    "fqn": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "\\"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_namespace_part"
-        },
-        {
-          "type": "REPEAT",
+          "type": "FIELD",
+          "name": "namespace",
           "content": {
             "type": "SEQ",
             "members": [
               {
-                "type": "STRING",
-                "value": "\\"
+                "type": "SYMBOL",
+                "name": "php_identifier"
               },
               {
-                "type": "SYMBOL",
-                "name": "_namespace_part"
+                "type": "REPEAT",
+                "content": {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "\\"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "php_identifier"
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -663,16 +647,24 @@
         {
           "type": "STRING",
           "value": "\\"
+        },
+        {
+          "type": "FIELD",
+          "name": "class_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "php_identifier"
+          }
         }
       ]
     },
-    "_namespace_part": {
+    "php_identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z_][a-zA-Z0-9_]*"
+      "value": "[A-z_][A-z0-9_]*"
     },
     "class_name": {
       "type": "PATTERN",
-      "value": "[A-Z][a-zA-Z0-9_]*"
+      "value": "[A-z][A-z0-9_]*"
     }
   },
   "extras": [

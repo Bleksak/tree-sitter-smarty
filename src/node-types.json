@@ -190,26 +190,32 @@
   {
     "type": "fqcn",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "class_name",
-          "named": true
-        },
-        {
-          "type": "fqn",
-          "named": true
-        }
-      ]
+    "fields": {
+      "class_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "php_identifier",
+            "named": true
+          }
+        ]
+      },
+      "namespace": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "\\",
+            "named": false
+          },
+          {
+            "type": "php_identifier",
+            "named": true
+          }
+        ]
+      }
     }
-  },
-  {
-    "type": "fqn",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "if",
@@ -424,15 +430,15 @@
     "named": false
   },
   {
-    "type": "class_name",
-    "named": true
-  },
-  {
     "type": "key",
     "named": true
   },
   {
     "type": "php",
+    "named": true
+  },
+  {
+    "type": "php_identifier",
     "named": true
   },
   {

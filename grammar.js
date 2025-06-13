@@ -140,18 +140,15 @@ module.exports = grammar({
     // text: $ => prec(-1, /[^\s\|{*}-]([^\|{*}]*[^\|{*}-])?/),
     text: $ => token(prec(-1, /[^{}]+/)),
     fqcn: $ => seq(
-      $.fqn,
-      $.class_name
-    ),
-
-    fqn: $ => seq(
-      optional('\\'),
-      $._namespace_part,
-      repeat(seq('\\', $._namespace_part)),
+      field('namespace', seq(
+        $.php_identifier,
+        repeat(seq('\\', $.php_identifier))
+      )),
       '\\',
+      field('class_name', $.php_identifier),
     ),
 
-    _namespace_part: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
-    class_name: $ => /[A-Z][a-zA-Z0-9_]*/,
+    php_identifier: $ => /[A-z_][A-z0-9_]*/,
+    class_name: $ => /[A-z][A-z0-9_]*/,
   },
 });
