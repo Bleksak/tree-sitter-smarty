@@ -21,6 +21,7 @@ module.exports = grammar({
       $.last,
       $.sep,
       $.varType,
+      $.var,
     ),
 
     _nested: $ => choice(
@@ -33,6 +34,7 @@ module.exports = grammar({
       $.last,
       $.sep,
       $.varType,
+      $.var,
     ),
 
     templateType: $ => seq(
