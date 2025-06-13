@@ -16,7 +16,6 @@ module.exports = grammar({
       $.text,
       $.foreach,
       $.if,
-      $.nocache,
       // $.literal,
     ),
 
@@ -26,7 +25,6 @@ module.exports = grammar({
       $.text,
       $.foreach,
       $.if,
-      $.nocache,
     ),
 
     comment: $ => seq('{*', /[^*]*/, '*}'),
@@ -57,7 +55,7 @@ module.exports = grammar({
 
     foreach: $ => seq(
       '{foreach',
-      $.parameter,
+      field('iterable', alias($.parameter, $.php)),
       // /\$[^\s]+/,
       'as',
       // field('key', $.php),

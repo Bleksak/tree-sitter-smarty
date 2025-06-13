@@ -1,6 +1,7 @@
 ===================================
 Test
 ===================================
+<head>Test | Test</head>
 Text
 {$test|implode:'.':true|print_r} Test
 {* comment *}
