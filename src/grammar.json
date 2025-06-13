@@ -618,19 +618,22 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "\\"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
+            "type": "TOKEN",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "\\"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
           },
           "named": true,
-          "value": "namespace"
+          "value": "fqn"
         },
         {
           "type": "SYMBOL",

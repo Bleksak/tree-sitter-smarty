@@ -200,7 +200,7 @@
           "named": true
         },
         {
-          "type": "namespace",
+          "type": "fqn",
           "named": true
         }
       ]
@@ -419,11 +419,11 @@
     "named": true
   },
   {
-    "type": "key",
+    "type": "fqn",
     "named": true
   },
   {
-    "type": "namespace",
+    "type": "key",
     "named": true
   },
   {
