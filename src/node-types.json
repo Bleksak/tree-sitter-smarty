@@ -565,6 +565,10 @@
     "named": false
   },
   {
+    "type": "{default",
+    "named": false
+  },
+  {
     "type": "{elseif",
     "named": false
   },
