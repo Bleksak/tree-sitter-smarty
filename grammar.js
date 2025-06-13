@@ -151,7 +151,7 @@ module.exports = grammar({
           )
         ),
       ),
-      '\\',
+      optional('\\'),
       field('class', alias($.php_identifier, $.class)),
     ),
 
