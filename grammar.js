@@ -36,7 +36,7 @@ module.exports = grammar({
 
     templateType: $ => seq(
       "{templateType",
-        field('value', alias($.namespace, $.value)),
+        $.fqcn,
       "}",
     ),
 
@@ -139,6 +139,17 @@ module.exports = grammar({
 
     // text: $ => prec(-1, /[^\s\|{*}-]([^\|{*}]*[^\|{*}-])?/),
     text: $ => token(prec(-1, /[^{}]+/)),
-    namespace: _ => /[a-zA-Z_\\][a-zA-Z0-9_\\]*/
+    fqcn: $ => seq(
+      alias(
+        optional('\\'),
+        $.namespace,
+        repeat(seq('\\', $.namespace)),
+        '\\',
+        $.fqn,
+      ),
+      $.class_name
+    ),
+    namespace: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
+    class_name: $ => /[A-Z][a-zA-Z0-9_]*/,
   },
 });
