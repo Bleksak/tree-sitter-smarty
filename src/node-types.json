@@ -207,6 +207,11 @@
     }
   },
   {
+    "type": "fqn",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "if",
     "named": true,
     "fields": {
@@ -411,15 +416,15 @@
     "named": false
   },
   {
+    "type": "\\",
+    "named": false
+  },
+  {
     "type": "as",
     "named": false
   },
   {
     "type": "class_name",
-    "named": true
-  },
-  {
-    "type": "fqn",
     "named": true
   },
   {

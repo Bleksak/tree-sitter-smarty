@@ -140,18 +140,18 @@ module.exports = grammar({
     // text: $ => prec(-1, /[^\s\|{*}-]([^\|{*}]*[^\|{*}-])?/),
     text: $ => token(prec(-1, /[^{}]+/)),
     fqcn: $ => seq(
-      alias(
-        token(
-          optional('\\'),
-          $.namespace,
-          repeat(seq('\\', $.namespace)),
-          '\\',
-        ),
-        $.fqn,
-      ),
+      $.fqn,
       $.class_name
     ),
-    namespace: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
+
+    fqn: $ => seq(
+      optional('\\'),
+      $._namespace_part,
+      repeat(seq('\\', $._namespace_part)),
+      optional('\\'),
+    ),
+
+    _namespace_part: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
     class_name: $ => /[A-Z][a-zA-Z0-9_]*/,
   },
 });
