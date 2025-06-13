@@ -142,7 +142,7 @@
         "required": true,
         "types": [
           {
-            "type": "php",
+            "type": "key",
             "named": true
           }
         ]
@@ -152,7 +152,7 @@
         "required": false,
         "types": [
           {
-            "type": "php",
+            "type": "value",
             "named": true
           }
         ]
@@ -254,11 +254,6 @@
     "fields": {}
   },
   {
-    "type": "php",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "template",
     "named": true,
     "fields": {},
@@ -310,7 +305,19 @@
     "named": false
   },
   {
+    "type": "key",
+    "named": true
+  },
+  {
+    "type": "php",
+    "named": true
+  },
+  {
     "type": "text",
+    "named": true
+  },
+  {
+    "type": "value",
     "named": true
   },
   {

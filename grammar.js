@@ -55,17 +55,12 @@ module.exports = grammar({
 
     foreach: $ => seq(
       '{foreach',
-      field('iterable', alias($.parameter, $.php)),
-      // /\$[^\s]+/,
+      field('iterable', alias(/\$[^\s]+/, $.php)),
       'as',
-      field('key', alias($.parameter, $.php)),
-      // field('key', $.php),
-      // /\$[^\s=}]+/,
+      field('key', alias(/\$[^\s=}]+/, $.key)),
       optional(seq(
         '=>',
-        field('value', alias($.parameter, $.php)),
-        // field('value', $.php),
-        // /\$[^}]+/,
+        field('value', alias(/\$[^}]+/, $.value)),
       )),
       '}',
       field('body', alias(repeat($._nested), $.body)),

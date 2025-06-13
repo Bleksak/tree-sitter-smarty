@@ -190,8 +190,8 @@
           "content": {
             "type": "ALIAS",
             "content": {
-              "type": "SYMBOL",
-              "name": "parameter"
+              "type": "PATTERN",
+              "value": "\\$[^\\s]+"
             },
             "named": true,
             "value": "php"
@@ -207,11 +207,11 @@
           "content": {
             "type": "ALIAS",
             "content": {
-              "type": "SYMBOL",
-              "name": "parameter"
+              "type": "PATTERN",
+              "value": "\\$[^\\s=}]+"
             },
             "named": true,
-            "value": "php"
+            "value": "key"
           }
         },
         {
@@ -230,11 +230,11 @@
                   "content": {
                     "type": "ALIAS",
                     "content": {
-                      "type": "SYMBOL",
-                      "name": "parameter"
+                      "type": "PATTERN",
+                      "value": "\\$[^}]+"
                     },
                     "named": true,
-                    "value": "php"
+                    "value": "value"
                   }
                 }
               ]
