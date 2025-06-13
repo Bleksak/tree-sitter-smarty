@@ -78,7 +78,7 @@ module.exports = grammar({
     if: $ => seq(
       '{if',
       field('condition', alias(/[^}]+/, $.text)),
-      '}',
+      field('closing_brace', '}'),
       field('body', alias(repeat($._nested), $.body)),
       repeat(field('alternative', $.else_if)),
       optional(field('alternative', $.else)),
