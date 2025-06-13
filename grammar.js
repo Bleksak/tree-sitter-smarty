@@ -68,6 +68,24 @@ module.exports = grammar({
       '{/foreach}',
     ),
 
+    first: $ => seq(
+      '{first}',
+      field('body', alias(repeat($._nested), $.body)),
+      '{/first}'
+    ),
+
+    last: $ => seq(
+      '{last}',
+      field('body', alias(repeat($._nested), $.body)),
+      '{/last}'
+    ),
+
+    sep: $ => seq(
+      '{sep}',
+      field('body', alias(repeat($._nested), $.body)),
+      '{/sep}'
+    ),
+
     if: $ => seq(
       '{if',
       field('condition', alias(/[^}]+/, $.text)),

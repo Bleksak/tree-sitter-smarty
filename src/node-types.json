@@ -333,11 +333,23 @@
     "named": false
   },
   {
+    "type": "{/first}",
+    "named": false
+  },
+  {
     "type": "{/foreach}",
     "named": false
   },
   {
     "type": "{/if}",
+    "named": false
+  },
+  {
+    "type": "{/last}",
+    "named": false
+  },
+  {
+    "type": "{/sep}",
     "named": false
   },
   {
@@ -353,6 +365,10 @@
     "named": false
   },
   {
+    "type": "{first}",
+    "named": false
+  },
+  {
     "type": "{foreach",
     "named": false
   },
@@ -362,6 +378,14 @@
   },
   {
     "type": "{include",
+    "named": false
+  },
+  {
+    "type": "{last}",
+    "named": false
+  },
+  {
+    "type": "{sep}",
     "named": false
   },
   {
