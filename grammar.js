@@ -57,7 +57,6 @@ module.exports = grammar({
 
     foreach: $ => seq(
       '{foreach',
-      vymrdana mrdka mater kunda pice
       $.parameter,
       // /\$[^\s]+/,
       'as',
