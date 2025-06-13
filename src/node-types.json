@@ -191,26 +191,22 @@
     "type": "fqcn",
     "named": true,
     "fields": {
-      "class_name": {
+      "class": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "php_identifier",
+            "type": "class",
             "named": true
           }
         ]
       },
       "namespace": {
         "multiple": true,
-        "required": true,
+        "required": false,
         "types": [
           {
-            "type": "\\",
-            "named": false
-          },
-          {
-            "type": "php_identifier",
+            "type": "namespace",
             "named": true
           }
         ]
@@ -323,6 +319,21 @@
     }
   },
   {
+    "type": "namespace",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "php_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "parameter",
     "named": true,
     "fields": {}
@@ -428,6 +439,10 @@
   {
     "type": "as",
     "named": false
+  },
+  {
+    "type": "class",
+    "named": true
   },
   {
     "type": "key",

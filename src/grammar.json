@@ -616,44 +616,58 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "FIELD",
-          "name": "namespace",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "php_identifier"
-              },
-              {
-                "type": "REPEAT",
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "namespace",
+              "content": {
+                "type": "ALIAS",
                 "content": {
                   "type": "SEQ",
                   "members": [
                     {
-                      "type": "STRING",
-                      "value": "\\"
-                    },
-                    {
                       "type": "SYMBOL",
                       "name": "php_identifier"
+                    },
+                    {
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SEQ",
+                        "members": [
+                          {
+                            "type": "STRING",
+                            "value": "\\"
+                          },
+                          {
+                            "type": "SYMBOL",
+                            "name": "php_identifier"
+                          }
+                        ]
+                      }
                     }
                   ]
-                }
+                },
+                "named": true,
+                "value": "namespace"
               }
-            ]
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "\\"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "FIELD",
-          "name": "class_name",
+          "name": "class",
           "content": {
-            "type": "SYMBOL",
-            "name": "php_identifier"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "php_identifier"
+            },
+            "named": true,
+            "value": "class"
           }
         }
       ]
