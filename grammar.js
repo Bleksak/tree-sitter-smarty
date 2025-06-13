@@ -70,15 +70,10 @@ module.exports = grammar({
       '{/foreach}',
     ),
 
-    foreach_else: $ => seq(
-      '{foreachelse}',
-      alias(repeat($._nested), $.body),
-    ),
-
     if: $ => seq(
       '{if',
       field('condition', alias(/[^}]+/, $.text)),
-      field('closing_brace', '}'),
+      '}',
       field('body', alias(repeat($._nested), $.body)),
       repeat(field('alternative', $.else_if)),
       optional(field('alternative', $.else)),
@@ -96,18 +91,6 @@ module.exports = grammar({
       '{else}',
       field('body', alias(repeat($._nested), $.body)),
     ),
-
-    nocache: $ => seq(
-      '{nocache}',
-      field('body', alias(repeat($._nested), $.body)),
-      '{/nocache}',
-    ),
-
-    // literal: $ => seq(
-    //   '{literal}',
-    //   field('body', alias(repeat($._smarty), $.text)),
-    //   '{/literal}',
-    // ),
 
     modifier: $ => seq(
       /[^|:}]+/,
