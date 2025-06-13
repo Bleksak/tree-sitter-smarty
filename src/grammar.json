@@ -645,10 +645,6 @@
                           }
                         ]
                       }
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "\\"
                     }
                   ]
                 },
@@ -660,6 +656,10 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "STRING",
+          "value": "\\"
         },
         {
           "type": "FIELD",

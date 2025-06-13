@@ -146,12 +146,12 @@ module.exports = grammar({
             seq(
               $.php_identifier,
               repeat(seq('\\', $.php_identifier)),
-              '\\',
             ),
             $.namespace,
           )
         ),
       ),
+      '\\',
       field('class', alias($.php_identifier, $.class)),
     ),
 
