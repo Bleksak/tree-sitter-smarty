@@ -34,6 +34,10 @@
       "required": true,
       "types": [
         {
+          "type": "first",
+          "named": true
+        },
+        {
           "type": "foreach",
           "named": true
         },
@@ -47,6 +51,14 @@
         },
         {
           "type": "inline",
+          "named": true
+        },
+        {
+          "type": "last",
+          "named": true
+        },
+        {
+          "type": "sep",
           "named": true
         },
         {
@@ -97,6 +109,22 @@
         "types": [
           {
             "type": "text",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "first",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "body",
             "named": true
           }
         ]
@@ -234,6 +262,22 @@
     }
   },
   {
+    "type": "last",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "body",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "modifier",
     "named": true,
     "fields": {},
@@ -254,6 +298,22 @@
     "fields": {}
   },
   {
+    "type": "sep",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "body",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "template",
     "named": true,
     "fields": {},
@@ -263,6 +323,10 @@
       "types": [
         {
           "type": "block",
+          "named": true
+        },
+        {
+          "type": "first",
           "named": true
         },
         {
@@ -279,6 +343,14 @@
         },
         {
           "type": "inline",
+          "named": true
+        },
+        {
+          "type": "last",
+          "named": true
+        },
+        {
+          "type": "sep",
           "named": true
         },
         {

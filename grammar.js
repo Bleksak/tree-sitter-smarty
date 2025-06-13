@@ -16,6 +16,9 @@ module.exports = grammar({
       $.text,
       $.foreach,
       $.if,
+      $.first,
+      $.last,
+      $.sep,
       // $.literal,
     ),
 
@@ -25,6 +28,9 @@ module.exports = grammar({
       $.text,
       $.foreach,
       $.if,
+      $.first,
+      $.last,
+      $.sep,
     ),
 
     comment: $ => seq('{*', /[^*]*/, '*}'),
