@@ -10,6 +10,7 @@ module.exports = grammar({
     template: $ => repeat($._latte),
 
     _latte: $ => choice(
+      $.templateType,
       $.inline,
       $.include,
       $.block,
@@ -31,6 +32,12 @@ module.exports = grammar({
       $.first,
       $.last,
       $.sep,
+    ),
+
+    templateType: $ => seq(
+      "{templateType",
+        field('value', alias($.namespace, $.value)),
+      "}",
     ),
 
     comment: $ => seq('{*', /[^*]*/, '*}'),
@@ -132,5 +139,6 @@ module.exports = grammar({
 
     // text: $ => prec(-1, /[^\s\|{*}-]([^\|{*}]*[^\|{*}-])?/),
     text: $ => token(prec(-1, /[^{}]+/)),
+    namespace: _ => /[a-zA-Z_\\][a-zA-Z0-9_\\]*/
   },
 });

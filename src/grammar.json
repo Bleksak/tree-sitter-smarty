@@ -13,6 +13,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "templateType"
+        },
+        {
+          "type": "SYMBOL",
           "name": "inline"
         },
         {
@@ -83,6 +87,32 @@
         {
           "type": "SYMBOL",
           "name": "sep"
+        }
+      ]
+    },
+    "templateType": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{templateType"
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "namespace"
+            },
+            "named": true,
+            "value": "value"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "}"
         }
       ]
     },
@@ -590,6 +620,10 @@
           "value": "[^{}]+"
         }
       }
+    },
+    "namespace": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z_\\\\][a-zA-Z0-9_\\\\]*"
     }
   },
   "extras": [

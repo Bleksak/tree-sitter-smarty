@@ -354,10 +354,30 @@
           "named": true
         },
         {
+          "type": "templateType",
+          "named": true
+        },
+        {
           "type": "text",
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "templateType",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "value",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -458,6 +478,10 @@
   },
   {
     "type": "{sep}",
+    "named": false
+  },
+  {
+    "type": "{templateType",
     "named": false
   },
   {
