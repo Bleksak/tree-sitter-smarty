@@ -486,6 +486,10 @@
     "named": true
   },
   {
+    "type": "name",
+    "named": true
+  },
+  {
     "type": "php",
     "named": true
   },

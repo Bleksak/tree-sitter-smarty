@@ -155,7 +155,7 @@
             "value": "\\$[^=]+"
           },
           "named": true,
-          "value": "var"
+          "value": "name"
         },
         {
           "type": "STRING",

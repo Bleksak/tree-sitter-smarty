@@ -50,7 +50,7 @@ module.exports = grammar({
 
     var: $ => seq(
       '{var',
-      alias(/\$[^=]+/, $.var),
+      alias(/\$[^=]+/, $.name),
       '=',
       alias(/[^}]+/, $.value),
       '}'
